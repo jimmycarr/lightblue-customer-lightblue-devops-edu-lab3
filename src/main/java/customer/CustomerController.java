@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+//Cloudant classes
 import com.cloudant.client.api.ClientBuilder;
 import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
@@ -49,7 +50,7 @@ public class CustomerController {
         
         try {
             String cldUrl = cloudantProperties.getProtocol() + "://" + cloudantProperties.getHost() + ":" + cloudantProperties.getPort();
-            logger.info("Connecting to cloudant at: " + cldUrl;
+            logger.info("Connecting to cloudant at: " + cldUrl);
             final CloudantClient cloudantClient = ClientBuilder.url(new URL(cldUrl))
                     .username(cloudantProperties.getUsername())
                     .password(cloudantProperties.getPassword())
@@ -61,9 +62,9 @@ public class CustomerController {
         }
     }
     
-    private Database cloudant  {
-        return cloudant;
-    }
+    // private Database cloudant  {
+    //     return cloudant;
+    // }
 
     /**
      * @return customer by username
