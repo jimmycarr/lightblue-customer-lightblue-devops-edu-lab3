@@ -4,4 +4,4 @@ applications:
   instances: 1
   disk_quota: 1024M
   services:
-  - lightblue-cloudant
+  - lightblue-cloudant-edu-lab4
